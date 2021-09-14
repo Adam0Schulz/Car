@@ -8,4 +8,16 @@ public class Engine {
         this.displacement = displacement;
         numberOfCylinders = cylinders;
     }
+
+    public int getHorsepower() {
+        return horsepower;
+    }
+
+    public double getDispl() {
+        return displacement;
+    }
+
+    public int getNumberOfCylinders() {
+        return numberOfCylinders;
+    }
 }

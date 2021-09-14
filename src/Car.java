@@ -1,38 +1,33 @@
 // Car in singular form.
 public class Car {
     // Attribute, field, instance variable, etc.
-    private String color;
-    String brand;
-    int numberOfSeats;
-    boolean isWorking; // Can the car run?
-    double acceleration; // 0-100 km/h
+    private String color = "undenified";
+    String brand = "undenified";
+    int numberOfSeats = 0;
+    boolean isWorking = true; // Can the car run?
+    double acceleration = 0.0; // 0-100 km/h
 
     private Engine engine;
 
-
-
-
     // Multiple constructors to create objects in different ways.
-    public Car()
-    {}
+    public Car() {
+    }
 
     // Takes color and brand to create an object.
-    public Car(String color, String brand)
-    {
+    public Car(String color, String brand) {
         this.setColor(color);
         this.setBrand(brand);
-        //this.color = color;
-        //this.brand = brand;
+        // this.color = color;
+        // this.brand = brand;
     }
-    public Car(String color, String brand, int numberOfSeats)
-    {
+
+    public Car(String color, String brand, int numberOfSeats) {
         this.setColor(color);
         this.setBrand(brand);
         this.setNumberOfSeats(numberOfSeats);
-        //this.color = color;
-        //this.brand = brand;
+        // this.color = color;
+        // this.brand = brand;
     }
-
 
     // Method definition - must be in class
     // ** means optional
@@ -40,8 +35,7 @@ public class Car {
     // {
     // Code that does something
     // }
-    public void printColor()
-    {
+    public void printColor() {
         System.out.println(this.color);
     }
 
@@ -51,13 +45,14 @@ public class Car {
     }
 
     // set method for color
-    public void setColor(String color)
-    {
+    public void setColor(String color) {
         this.color = color;
     }
+
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
     public void setNumberOfSeats(int numberOfSeats) {
         this.numberOfSeats = numberOfSeats;
     }
@@ -66,18 +61,15 @@ public class Car {
         this.engine = myEngine;
     }
 
-
     /*
-    public void setColor(String newColor)
-    {
-        color = newColor;
-    }
-    */
+     * public void setColor(String newColor) { color = newColor; }
+     */
 
     // Overwriting the toString method.
-    public String toString(){
-        return "Brand: " + getColor() + " color: " + color + " seats: " + numberOfSeats + " acceleration: " + acceleration + " horsepower: ";
+    public String toString() {
+        return "Brand: " + getColor() + " color: " + color + " seats: " + numberOfSeats + " acceleration: "
+                + acceleration + " horsepower: " + engine.getHorsepower() + " displacement of the engine: "
+                + engine.getDispl() + " number of cylinders " + engine.getNumberOfCylinders();
     }
-
 
 }
